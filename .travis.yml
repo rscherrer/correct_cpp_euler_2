@@ -1,0 +1,37 @@
+# Correct C++ chapter's .travis.yml file
+# For all chapters, these are identical
+# Do not edit by hand
+
+language: cpp
+compiler: gcc
+
+install:
+  # Get my folder
+  - my_github=${PWD##*/}  
+  - chapter_folder=`echo $my_github | sed 's/correct_cpp_//'`  
+  - test_path=https://raw.githubusercontent.com/richelbilderbeek/correct_cpp/master/chapters/$chapter_folder/test
+  - pro_file_path=https://raw.githubusercontent.com/richelbilderbeek/correct_cpp/master/chapters/$chapter_folder/main.pro
+  # shared install
+  - wget https://raw.githubusercontent.com/richelbilderbeek/correct_cpp/master/shared/install
+  - chmod +x install
+  - sudo ./install
+  # test
+  - wget $test_path
+  - chmod +x test
+  - wget $pro_file_path
+
+# Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+
+script: 
+  - ./test
+  - cppcheck --quiet --enable=all --error-exitcode=1 . 
+  - ./do_oclint
+  - ./check_doc
+
+after_script:
+  - ./get_code_cov > /dev/null
+  - codecov > /dev/null
