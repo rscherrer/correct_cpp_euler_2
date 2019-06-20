@@ -2,7 +2,7 @@
 
 Branch|[Travis CI](https://travis-ci.org)|[Codecov](https://www.codecov.io)
 ---|---|---
-master|[![Build Status](https://travis-ci.org/richelbilderbeek/correct_cpp_euler_2.svg?branch=master)](https://travis-ci.org/richelbilderbeek/correct_cpp_euler_2)|[![codecov.io](https://codecov.io/github/richelbilderbeek/correct_cpp_euler_2/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/correct_cpp_euler_2/branch/master)
+master|[![Build Status](https://travis-ci.org/rscherrer/correct_cpp_euler_2.svg?branch=master)](https://travis-ci.org/rscherrer/correct_cpp_euler_2)|[![codecov.io](https://codecov.io/github/rscherrer/correct_cpp_euler_2/coverage.svg?branch=master)](https://codecov.io/github/rscherrer/correct_cpp_euler_2/branch/master)
 
 [Correct C++](https://github.com/richelbilderbeek/correct_cpp) chapter 'euler_2'.
 
