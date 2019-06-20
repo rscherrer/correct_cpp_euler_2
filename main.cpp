@@ -7,7 +7,7 @@
 int main()
 {
 
-    std::vector<int> evenFibonnaci;
+    std::vector<int> evenFibonnaci{ 2 };
     std::vector<int> fibonnaciNumbers{ 1, 2 };
 
     // Find Fibonacci numbers and put them in a vector up to 4 millions
