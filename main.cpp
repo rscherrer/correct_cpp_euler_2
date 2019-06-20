@@ -15,7 +15,7 @@ int main()
 
         fibonnaciNumbers.push_back(fibonnaciNumbers[index] + fibonnaciNumbers[index + 1]);
 
-        // Every time a Fibonacci number is even, put it in a separate vector of even Fibonacci numbers
+        // Collect even Fibonnaci numbers
         if (fibonnaciNumbers.back() % 2 == 0) {
             evenFibonnaci.push_back(fibonnaciNumbers.back());
         }
