@@ -18,6 +18,9 @@ int main()
         // Collect even Fibonnaci numbers
         if (fibonnaciNumbers.back() % 2 == 0) {
             evenFibonnaci.push_back(fibonnaciNumbers.back());
+        } 
+        else {
+            continue;
         }
     }
 
