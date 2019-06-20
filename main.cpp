@@ -11,7 +11,7 @@ int main()
     std::vector<int> fibonnaciNumbers{ 1, 2 };
 
     // Find Fibonacci numbers and put them in a vector up to 4 millions
-    for (int index = 0; fibonnaciNumbers[index] + fibonnaciNumbers[index + 1] < 4e6; ++index) {
+    for (int index = 0; fibonnaciNumbers[index] + fibonnaciNumbers[index + 1] <= 4e6; ++index) {
 
         fibonnaciNumbers.push_back(fibonnaciNumbers[index] + fibonnaciNumbers[index + 1]);
 
